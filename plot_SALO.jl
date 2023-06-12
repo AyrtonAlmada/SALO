@@ -17,7 +17,7 @@ _INPUT_:
 function plot_SALO(Ls::Matrix{Float64}, L::Float64, l0::Int64, k0::Int64, ks::Vector{Int64}, T::Union{Float64,Int64}, n::Int64)
 	fs = ks/T
 	gra = (.8,.8,.8,1.)
-
+	ll=[1,1,1]
 	if n > 5
 		l1 = findmax(Ls)[2][1]
 		l2 = findmax([Ls[1:l1-1,:];-1000*ones(1,length(ks));Ls[l1+1:n,:]])[2][1]
